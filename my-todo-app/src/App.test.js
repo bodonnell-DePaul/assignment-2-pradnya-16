@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import TodoList from './my-todo-app/src/App';
+import TodoList from './App';
 
 describe('TodoList Component', () => {
   test('renders without crashing', () => {
