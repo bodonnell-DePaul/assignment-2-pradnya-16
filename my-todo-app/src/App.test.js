@@ -1,19 +1,26 @@
+/*
+Name: Pradnya Kadam
+Student ID: 2173563
+Web Application Assignment 2
+*/
+
+
 import { render, screen, fireEvent } from '@testing-library/react';
-import TodoList from './App';
+import App from './App';
 
 describe('TodoList Component', () => {
   test('renders without crashing', () => {
-    render(<TodoList />);
+    render(<App />);
   });
 
   test('renders the title', () => {
-    render(<TodoList />);
-    const titleElement = screen.getByText(/Assignment 2: ToDo List/i);
+    render(<App />);
+    const titleElement = screen.getByText(/Assignment 2: Pradnya's ToDo List/i);
     expect(titleElement).toBeInTheDocument();
   });
 
   test('renders form elements', () => {
-    render(<TodoList />);
+    render(<App />);
     const todoInput = screen.getByPlaceholderText(/Add todo item/i);
     const dueDateInput = screen.getByLabelText(/Due Date/i);
     const addButton = screen.getByText(/Add Todo/i);
@@ -24,13 +31,13 @@ describe('TodoList Component', () => {
   });
 
   test('renders todo items', () => {
-    render(<TodoList />);
+    render(<App />);
     const todoItems = screen.getAllByRole('tab');
     expect(todoItems.length).toBe(4); // Assuming there are 4 todos in the initial state
   });
 
   test('renders todo items with correct titles', () => {
-    render(<TodoList />);
+    render(<App />);
     const todoTitles = ['Todo 1', 'Todo 2', 'Todo 3', 'Todo 4'];
     todoTitles.forEach(title => {
       expect(screen.getByText(title)).toBeInTheDocument();
@@ -50,7 +57,7 @@ describe('TodoList Component', () => {
   };
   
   test('applies correct variant based on due date', () => {
-    render(<TodoList />);
+    render(<App />);
     const todoItems = screen.getAllByRole('tabpanel');
     const todoTab = screen.getAllByRole('tablist');
   

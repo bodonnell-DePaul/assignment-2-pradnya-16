@@ -1,3 +1,9 @@
+/*
+Name: Pradnya Kadam
+Student ID: 2173563
+Web Application Assignment 2
+*/
+
 import React from 'react';
 import { ListGroup, Tab, Row, Col, Container, Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -32,6 +38,7 @@ function App() {
                 <Form.Control type="text" placeholder="Add todo item" />
               </Form.Group>
               <Form.Group controlId="formDueDate">
+                <Form.Label>Due Date</Form.Label>  
                 <Form.Control type="date" />
               </Form.Group>
               <Button variant="primary" type="submit" className="add-todo-btn">
